@@ -29,16 +29,95 @@
       </nav>
     </header>
     <main class="main-container main-container--form">
+      <h1 class="visually-hidden">Консультация по выбору программы питания</h1>
       <section class="questionary">
-        <h1 class="questionary__title">
+        <h2 class="questionary__title">
           Подбор программы
-        </h1>
+        </h2>
         <p class="questionary__subtitle">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
-        <form class="questionary__form form" action="https://echo.htmlacademy.ru" method="post">
-
+        <form class="questionary__form main-form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="main-form__field">
+            <legend class="visually-hidden">Анкета питомца</legend>
+            <label class="main-form__label" for="name">Имя:*</label>
+            <input class="main-form__input input" name="name" id="name" type="text" placeholder="Барсик" required>
+            <label class="main-form__label" for="weight">Вес (кг):*</label>
+            <input class="main-form__input input" name="weight" id="weight" type="number" value="7" step="1" required>
+            <label class="main-form__label" for="age">Возраст (лет):</label>
+            <input class="main-form__input input" name="age" id="age" type="number" value="7" step="1">
+          </fieldset>
+          <fieldset class="main-form__field main-form__field--bordered">
+            <legend class="visually-hidden">Ваша цель</legend>
+            <label class="main-form__label label--radio">
+              <input class="main-form__radio" type="radio" name="target" checked>
+              <span>Похудение</span>
+            </label>
+            <label class="main-form__label label--radio">
+              <input class="main-form__radio" type="radio" name="target">
+              <span>Набор массы</span>
+            </label>
+            <label class="main-form__label label--radio">
+              <input class="main-form__radio" type="radio" name="target">
+              <span>Не знаю (Нужен ваш совет)</span>
+            </label>
+          </fieldset>
+          <fieldset class="main-form__field main-form__field--marked">
+            <legend class="main-form__legend">Контактные данные (владельца кота)</legend>
+            <label class="main-form__label" for="email">E-mail:*</label>
+            <input class="main-form__input input input--decorated" name="email" id="email" type="email" placeholder="kuklachev@gmail.com" required>
+            <label class="main-form__label" for="phone">Телефон:*</label>
+            <input class="main-form__input input input--decorated" name="phone" id="phone" type="tel" placeholder="8 (960) 900-60-90" required>
+          </fieldset>
+          <fieldset class="main-form__field main-form__field--marked">
+            <legend class="main-form__legend">Комментарий</legend>
+            <textarea class="main-form__textarea" name="comment" aria-label="Ваш комментарий здесь." cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="main-form__field main-form__field--marked">
+            <legend class="main-form__legend">Дополнительно</legend>
+            <label class="main-form__label">
+              <input сдфыы="main-form__checkbox" type="checkbox" name="additions[]" value="sweetener" checked>
+              <span>Cахарозаменитель</span>
+            </label>
+            <label class="main-form__label">
+              <input сдфыы="main-form__checkbox" type="checkbox" name="additions[]" value="water">
+              <span>Питьевая вода</span>
+            </label>
+            <label class="main-form__label">
+              <input сдфыы="main-form__checkbox" type="checkbox" name="additions[]" value="milk">
+              <span>Молоко</span>
+            </label>
+            <label class="main-form__label">
+              <input сдфыы="main-form__checkbox" type="checkbox" name="additions[]" value="vitamins">
+              <span>Витамины</span>
+            </label>
+          </fieldset>
+          <button class="main-form__button button" type="submit">Отправить заявку</button>
         </form>
+        <p class="questionary__legend">
+          * — Обязательные поля
+        </p>
+      </section>
+      <section class="contacts">
+        <div class="contacts__card-wrapper">
+          <h2 class="visually-hidden">Контакты.</h2>
+          <div class="contacts__wrapper">
+            <div class="contacts__inner contacts__inner--form-page">
+              <p class="contacts__slogan">
+                Приглашаем к сотрудничеству дилеров!
+              </p>
+              <address class="contacts__address">
+                <span class="contacts__street">ул. Большая Конюшенная, д. 19/8</span>
+                <span class="contacts__city">Санкт-Петербург</span>
+              </address>
+            </div>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002783!2d30.32085871567726!3d59.93871916905471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1648894992785!5m2!1sru!2sru"
+            width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
       </section>
     </main>
     <footer class="footer">
