@@ -28,15 +28,18 @@
       </ul>
     </nav>
   </header>
-  <main class="main-container main-container--form">
-    <h1 class="visually-hidden">Консультация по выбору программы питания.</h1>
+  <main class="main-container">
     <section class="questionary">
-      <h2 class="questionary__title">
-        Подбор программы
-      </h2>
-      <p class="questionary__subtitle">
-        Заполните анкету, и мы подберем программу питания для вашего кота
-      </p>
+      <header class="questionary__header section-header">
+        <div class="section-header__wrapper">
+          <h1 class="section-header__title">
+            Подбор программы
+          </h1>
+          <p class="section-header__subtitle">
+            Заполните анкету, и мы подберем программу питания для вашего кота
+          </p>
+        </div>
+      </header>
       <form class="questionary__form main-form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="main-form__field">
           <legend class="visually-hidden">Анкета питомца</legend>
@@ -49,47 +52,47 @@
         </fieldset>
         <fieldset class="main-form__field main-form__field--bordered">
           <legend class="visually-hidden">Ваша цель</legend>
-          <label class="main-form__label label--radio">
-            <input class="main-form__radio" type="radio" name="target" checked>
-            <span>Похудение</span>
+          <label class="main-form__option option">
+            <input class="option__radio" type="radio" name="target" checked>
+            <span class="option__name">Похудение</span>
           </label>
-          <label class="main-form__label label--radio">
-            <input class="main-form__radio" type="radio" name="target">
-            <span>Набор массы</span>
+          <label class="main-form__option option">
+            <input class="option__radio" type="radio" name="target">
+            <span class="option__name">Набор массы</span>
           </label>
-          <label class="main-form__label label--radio">
-            <input class="main-form__radio" type="radio" name="target">
-            <span>Не знаю (Нужен ваш совет)</span>
+          <label class="main-form__option option">
+            <input class="option__radio" type="radio" name="target">
+            <span class="option__name">Не знаю (Нужен ваш совет)</span>
           </label>
         </fieldset>
-        <fieldset class="main-form__field main-form__field--marked">
-          <legend class="main-form__legend">Контактные данные (владельца кота)</legend>
+        <fieldset class="main-form__field">
+          <legend class="main-form__legend title title--decorated">Контактные данные (владельца кота)</legend>
           <label class="main-form__label" for="email">E-mail:*</label>
           <input class="main-form__input input input--decorated" name="email" id="email" type="email" placeholder="kuklachev@gmail.com" required>
           <label class="main-form__label" for="phone">Телефон:*</label>
           <input class="main-form__input input input--decorated" name="phone" id="phone" type="tel" placeholder="8 (960) 900-60-90" required>
         </fieldset>
-        <fieldset class="main-form__field main-form__field--marked">
-          <legend class="main-form__legend">Комментарий</legend>
+        <fieldset class="main-form__field">
+          <legend class="main-form__legend title title--decorated">Комментарий</legend>
           <textarea class="main-form__textarea" name="comment" aria-label="Ваш комментарий здесь." cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset class="main-form__field main-form__field--marked">
-          <legend class="main-form__legend">Дополнительно</legend>
-          <label class="main-form__label">
-            <input class="main-form__checkbox" type="checkbox" name="additions[]" value="sweetener" checked>
-            <span>Cахарозаменитель</span>
+        <fieldset class="main-form__field">
+          <legend class="main-form__legend title title--decorated">Дополнительно</legend>
+          <label class="main-form__option option">
+            <input class="option__checkbox" type="checkbox" name="additions[]" value="sweetener" checked>
+            <span class="option__name">Cахарозаменитель</span>
           </label>
-          <label class="main-form__label">
-            <input class="main-form__checkbox" type="checkbox" name="additions[]" value="water">
-            <span>Питьевая вода</span>
+          <label class="main-form__option option">
+            <input class="option__checkbox" type="checkbox" name="additions[]" value="water">
+            <span class="option__name">Питьевая вода</span>
           </label>
-          <label class="main-form__label">
-            <input class="main-form__checkbox" type="checkbox" name="additions[]" value="milk">
-            <span>Молоко</span>
+          <label class="main-form__option option">
+            <input class="option__checkbox" type="checkbox" name="additions[]" value="milk">
+            <span class="option__name">Молоко</span>
           </label>
-          <label class="main-form__label">
-            <input class="main-form__checkbox" type="checkbox" name="additions[]" value="vitamins">
-            <span>Витамины</span>
+          <label class="main-form__option option">
+            <input class="option__checkbox" type="checkbox" name="additions[]" value="vitamins">
+            <span class="option__name">Витамины</span>
           </label>
         </fieldset>
         <button class="main-form__button button" type="submit">Отправить заявку</button>
