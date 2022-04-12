@@ -1,0 +1,36 @@
+.main-nav {
+  padding-top: 10px;
+  padding-bottom: 18px;
+}
+
+.main-nav__toggle {
+  width: 24px;
+  height: 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: 1px solid @accentColor;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  background-color: @pageColor;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.main-nav__link {
+  .oswaldMedium;
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @titleColor;
+}
