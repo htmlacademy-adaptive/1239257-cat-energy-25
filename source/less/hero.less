@@ -1,13 +1,12 @@
 .hero {
+  padding-top: 27px;
   padding-bottom: 20px;
+  background: linear-gradient(180deg, @accentColor 302px, @pageColor 200px);
 }
 
-.hero__description {
-  min-height: 302px;
-  padding-top: 27px;
-  text-align: center;
-  background-color: @accentColor;
+.hero__inner {
   color: @pageColor;
+  text-align: center;
 }
 
 .hero__title {
@@ -21,6 +20,7 @@
 .hero__slogan {
   .oswaldRegular;
   margin: 0;
+  margin-bottom: 29px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
@@ -33,6 +33,87 @@
   margin: 0 auto;
 }
 
-.hero__cta {
+.hero__button {
+  width: 100%;
   padding: 7px 0;
+  margin-top: 3px;
+}
+
+@media(min-width: @tablet-width) {
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 609px;
+    background: none;
+  }
+
+  .hero__inner {
+    width: 414px;
+    color: @titleColor;
+    text-align: left;
+  }
+
+  .hero__title {
+    margin-bottom: 40px;
+    font-size: 58px;
+    line-height: 60px;
+  }
+
+  .hero__slogan {
+    margin-bottom: 49px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .hero__image {
+    position: absolute;
+    width: 709px;
+    height: 609px;
+    margin: 0 auto;
+  }
+
+  .hero__button {
+    display: inline-block;
+    width: auto;
+    padding: 14px 27px;
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media(min-width: @desktop-width) {
+  .hero {
+    min-height: 689px;
+    padding-top: 136px;
+    padding-bottom: 54px;
+    background: linear-gradient(270deg, @accentColor 0, @accentColor 50%, @pageColor 50%, @pageColor 100%);
+  }
+
+  .hero__wrapper {
+    position: relative;
+  }
+
+  .hero__inner {
+    padding-top: 82px;
+  }
+
+  .hero__slogan {
+    margin-bottom: 52px;
+  }
+
+  .hero__image {
+    position: absolute;
+    width: 552px;
+    height: 499px;
+    top: 0;
+    left: 585px;
+  }
+
+  .hero__button {
+    display: inline-block;
+    width: auto;
+    padding: 14px 27px;
+    margin-top: 0;
+    position: static;
+  }
 }

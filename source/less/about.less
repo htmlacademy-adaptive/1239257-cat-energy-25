@@ -11,6 +11,8 @@
 .about__benefits {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
   list-style: none;
 }
 
@@ -19,5 +21,28 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .about__benefits {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .about__benefit {
+    width: 249px;
+    min-height: 280px;
+    margin-bottom: 37px;
+    padding-right: 19px;
+
+    &:nth-child(odd) {
+      padding-right: 19px;
+      margin-right: 134px;
+    }
+
+    &:last-child {
+      margin-bottom: 37px;
+    }
   }
 }

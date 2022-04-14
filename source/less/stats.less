@@ -1,11 +1,19 @@
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .stats__item {
-  display: inline-block;
-  min-width: 124px;
-  height: 56px;
+  width: 124px;
+  margin-right: 32px;
   padding-top: 14px;
   text-align: center;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .stats__fact {
@@ -18,4 +26,11 @@
 .stats__description {
   margin-left: 0;
   padding: 0 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .stats__item {
+    width: 162px;
+    margin-bottom: 10px;
+  }
 }
