@@ -40,7 +40,6 @@
 
 @media (min-width: @tablet-width) {
   .results {
-    background-color: @pageColor;
     background: linear-gradient(0deg, rgba(234, 234, 234, 1) 462px, @pageColor 462px);
   }
 
@@ -103,9 +102,30 @@
   }
 
   .results__inner {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  .results__stats {
+    margin-bottom: 40px;
+  }
+
+  .results__resume {
+    width: 366px;
+    display: flex;
     align-items: center;
-    margin-bottom: 70px;
+  }
+
+  .results__resume-text {
+    display: block;
+    width: 174px;
+  }
+
+  .results__price {
+    width: 162px;
+    margin-left: 25px;
+    text-align: center;
   }
 }

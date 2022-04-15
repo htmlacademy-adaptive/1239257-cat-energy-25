@@ -1,6 +1,9 @@
 .about {
-  padding-bottom: 49px;
   background-color: @pageColor;
+}
+
+.about__wrapper {
+  padding-bottom: 49px;
 }
 
 .about__title {
@@ -43,6 +46,37 @@
 
     &:last-child {
       margin-bottom: 37px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .about__wrapper {
+    padding-top: 71px;
+    padding-bottom: 0;
+  }
+
+  .about__title {
+    margin-bottom: 30px;
+  }
+
+  .about__benefit {
+    width: 249px;
+    margin-bottom: 26px;
+    margin-right: 72px;
+    padding-right: 19px;
+
+    &:nth-child(odd) {
+      margin-right: 72px;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 26px;
+      margin-right: 0;
     }
   }
 }
