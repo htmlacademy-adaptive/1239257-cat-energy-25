@@ -1,8 +1,30 @@
+.photoslider__inner {
+  height: 232px;
+  margin-bottom: 15px;
+}
+
+.photoslider__image {
+  display: block;
+  width: 100%;
+  height: 232px;
+
+  &--hidden {
+    opacity: 0;
+  }
+}
+
+.photoslider__toggle {
+  padding: 0 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .photoslider__button {
   .oswaldRegular;
-  padding: 8px 6px;
+  padding: 7px 6px;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 16px;
   text-transform: uppercase;
   text-align: center;
   color: @titleColor;
@@ -27,4 +49,42 @@
   height: 6px;
   background-color: @accentColor;
   border-radius: 6px;
+}
+
+@media (min-width: @tablet-width) {
+  .photoslider__inner {
+    width: 592px;
+    height: 511px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  .photoslider__image {
+    height: 511px;
+  }
+
+  .photoslider__button {
+    padding: 0 10px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .photoslider__line {
+    width: 426px;
+    height: 6px;
+    background: @sliderDecor;
+    border-radius: 6px;
+    position: relative;
+  }
+
+  .photoslider__handle {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    border: 1px solid @sliderDecor;
+    border-radius: 50%;
+    background: radial-gradient(circle, @accentColor 4px, @pageColor 4px, @pageColor 100%);
+  }
 }

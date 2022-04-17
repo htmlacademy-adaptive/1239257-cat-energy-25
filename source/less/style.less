@@ -31,13 +31,27 @@
 @import "social";
 @import "copyright";
 
-body {
-  margin: 0;
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
+  line-height: 18px;
   color: #444444;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .visually-hidden {
@@ -51,8 +65,4 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.hero {
-  .oswaldRegular;
 }
