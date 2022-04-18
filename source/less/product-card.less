@@ -1,7 +1,20 @@
 .product-card {
-  padding: 25px 0;
   font-size: 12px;
   line-height: 16px;
+}
+
+.product-card__wrapper {
+  padding: 25px 20px;
+}
+
+.product-card__description {
+
+}
+
+.product-card__preview {
+  display: block;
+
+  text-align: center;
 }
 
 .product-card__name {
@@ -17,3 +30,24 @@
 .product-card__option-value {
   margin-left: 0;
 }
+
+.product-card__button {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .product-card {
+    background-color: @basicBg;
+  }
+
+  .product-card__wrapper {
+
+  }
+
+  .product-card__preview {
+  }
+}
+
+
