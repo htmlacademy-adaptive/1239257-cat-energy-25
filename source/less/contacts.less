@@ -1,15 +1,17 @@
 .contacts {
   background-color: @pageColor;
-}
-
-.contacts__inner {
-  padding: 26px 20px;
-  display: flex;
-  justify-content: space-between;
 
   &--page {
     background-color: @basicBg;
   }
+}
+
+.contacts__inner {
+  width: 320px;
+  margin: 0 auto;
+  padding: 26px 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .contacts__iframe {
@@ -38,19 +40,23 @@
 
 @media (min-width: @tablet-width) {
   .contacts__inner {
+    width: @tablet-width;
+    margin: 0 auto;
     padding: 56px 70px;
     padding-top: 60px;
   }
 
   .contacts__slogan {
-    width: 170px;
+    width: 210px;
+    padding-left: 40px;
     font-size: 20px;
     line-height: 26px;
   }
 
   .contacts__address {
-    width: 170px;
+    width: 210px;
     min-height: 80px;
+    padding-right: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
