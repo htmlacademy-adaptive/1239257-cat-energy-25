@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Кэт энерджи | Индивидуальный план питания</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,12 +13,13 @@
         <a class="main-nav__logo logo"  href="index.html">
           <img class="logo__image logo__image--single" src="img/logo/logo-mobile.svg" alt="Логотип магазина." width="34"
             height="38">
-          <img class="logo__name" src="img/logo/logo-text.svg" alt="Название магазина." width="101" height="18">
+          <img class="logo__name logo__name--top" src="img/logo/logo-text.svg" alt="Название магазина." width="101" height="18">
+          <img class="logo__common" src="img/logo/main-logo.svg" alt="Логотип магазина." width="174" height="52">
         </a>
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
-        <ul class="main-nav__list">
+        <ul class="main-nav__list main-nav__list--closed">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
@@ -31,64 +33,71 @@
       </div>
     </nav>
   </header>
-  <main class="main-container">
+  <main class="page form-page">
+    <header class="form-page__header">
+      <div class="wrapper">
+        <h1 class="form-page__title">
+          Подбор программы
+        </h1>
+        <p class="form-page__subtitle">
+          Заполните анкету, и мы подберем программу питания для вашего кота
+        </p>
+      </div>
+    </header>
     <section class="questionary">
-        <header class="questionary__header section-header">
-          <div class="section-header__wrapper wrapper">
-            <h1 class="section-header__title">
-              Подбор программы
-            </h1>
-            <p class="section-header__subtitle">
-              Заполните анкету, и мы подберем программу питания для вашего кота
-            </p>
-          </div>
-        </header>
-        <form class="questionary__form main-form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="main-form__wrapper wrapper">
-            <fieldset class="main-form__field">
-              <legend class="visually-hidden">Анкета питомца</legend>
-              <label class="main-form__label">
-                <span class="main-form__input-name">Имя:*</span>
-                <input class="main-form__input input" name="name" type="text" placeholder="Барсик" required>
-              </label>
-              <label class="main-form__label">
-                <span class="main-form__input-name">Вес (кг):*</span>
-                <input class="main-form__input input" name="weight" type="number" value="7" step="1" required>
-              </label>
-              <label class="main-form__label">
-                <span class="main-form__input-name">Возраст (лет):</span>
-                <input class="main-form__input input" name="age" type="number" value="7" step="1">
-              </label>
-            </fieldset>
-            <fieldset class="main-form__field main-form__field--bordered">
-              <legend class="visually-hidden">Ваша цель</legend>
-              <label class="main-form__option option">
-                <input class="option__radio" type="radio" name="target"  value="lose" checked>
-                <span class="option__name">Похудение</span>
-              </label>
-              <label class="main-form__option option">
-                <input class="option__radio" type="radio" name="target" value="gain">
-                <span class="option__name">Набор массы</span>
-              </label>
-              <label class="main-form__option option">
-                <input class="option__radio" type="radio" name="target" value="consult">
-                <span class="option__name">Не знаю (Нужен ваш совет)</span>
-              </label>
-            </fieldset>
-          </div>
+      <form class="questionary__form main-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="main-form__field-wrapper">
           <fieldset class="main-form__field">
-            <legend class="main-form__legend title title--decorated">Контактные данные (владельца кота)</legend>
-            <label class="main-form__label" for="email">E-mail:*</label>
-            <input class="main-form__input input input--decorated" name="email" id="email" type="email" placeholder="kuklachev@gmail.com" required>
-            <label class="main-form__label" for="phone">Телефон:*</label>
-            <input class="main-form__input input input--decorated" name="phone" id="phone" type="tel" placeholder="8 (960) 900-60-90" required>
+            <legend class="visually-hidden">Анкета питомца</legend>
+            <label class="main-form__label">
+              <span class="main-form__input-name">Имя:*</span>
+              <input class="main-form__input input" name="name" type="text" placeholder="Барсик" required>
+            </label>
+            <label class="main-form__label">
+              <span class="main-form__input-name">Вес (кг):*</span>
+              <input class="main-form__input input" name="weight" type="number" value="7" step="1" required>
+            </label>
+            <label class="main-form__label">
+              <span class="main-form__input-name">Возраст (лет):</span>
+              <input class="main-form__input input" name="age" type="number" value="7" step="1">
+            </label>
           </fieldset>
-          <fieldset class="main-form__field">
-            <legend class="main-form__legend title title--decorated">Комментарий</legend>
-            <textarea class="main-form__textarea" name="comment" aria-label="Ваш комментарий здесь." cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <fieldset class="main-form__field main-form__field--bordered">
+            <legend class="visually-hidden">Ваша цель</legend>
+            <label class="main-form__option option">
+              <input class="option__radio" type="radio" name="target"  value="lose" checked>
+              <span class="option__name">Похудение</span>
+            </label>
+            <label class="main-form__option option">
+              <input class="option__radio" type="radio" name="target" value="gain">
+              <span class="option__name">Набор массы</span>
+            </label>
+            <label class="main-form__option option">
+              <input class="option__radio" type="radio" name="target" value="consult">
+              <span class="option__name">Не знаю (Нужен ваш совет)</span>
+            </label>
           </fieldset>
+        </div>
+        <fieldset class="main-form__field">
+            <legend class="main-form__legend">Контактные данные (владельца кота)</legend>
+            <div class="main-form__field-wrapper">
+              <label class="main-form__label" for="email">
+                <span class="main-form__input-name">E-mail:*</span>
+                <input class="main-form__input input input--decorated" name="email" id="email" type="email" placeholder="kuklachev@gmail.com" required>
+              </label>
+              <label class="main-form__label" for="phone">
+                <span class="main-form__input-name">Телефон:*</span>
+                <input class="main-form__input input input--decorated" name="phone" id="phone" type="tel" placeholder="8 (960) 900-60-90" required>
+              </label>
+            </div>
+        </fieldset>
+        <fieldset class="main-form__field">
+          <legend class="main-form__legend">Комментарий</legend>
+          <textarea class="main-form__textarea" name="comment" aria-label="Ваш комментарий здесь." cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <div class="main-form__wrapper">
           <fieldset class="main-form__field">
-            <legend class="main-form__legend title title--decorated">Дополнительно</legend>
+            <legend class="main-form__legend">Дополнительно</legend>
             <label class="main-form__option option">
               <input class="option__checkbox" type="checkbox" name="additions[]" value="sweetener" checked>
               <span class="option__name">Cахарозаменитель</span>
@@ -106,15 +115,19 @@
               <span class="option__name">Витамины</span>
             </label>
           </fieldset>
+        </div>
+        <div class="main-form__button-wrapper">
           <button class="main-form__button button" type="submit">Отправить заявку</button>
-        </form>
-        <p class="questionary__legend">
-          * — Обязательные поля
-        </p>
+          <p class="main-form__info">
+            * — Обязательные поля
+          </p>
+        </div>
+      </form>
+
     </section>
     <section class="contacts">
-      <div class="contacts__card-wrapper">
-        <h2 class="visually-hidden">Контакты.</h2>
+      <h2 class="visually-hidden">Контакты.</h2>
+      <div class="contacts__container">
         <div class="contacts__wrapper">
           <div class="contacts__inner contacts__inner--page">
             <p class="contacts__slogan">

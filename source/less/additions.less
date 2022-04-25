@@ -1,5 +1,57 @@
+.additions__header {
+  padding-top: 25px;
+  padding-bottom: 36px;
+}
+
+.additions__title {
+  .oswaldRegular;
+  font-size: 24px;
+  line-height: 24px;
+  color: @titleColor;
+}
+
+.additions__wrapper {
+  padding-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+}
+
 .additions__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+@media (min-width: @tablet-width) {
+  .additions__wrapper {
+    padding-bottom: 76px;
+  }
+
+  .additions__list {
+    margin-bottom: 69px;
+  }
+
+  .additions__item {
+    &:last-child {
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additions__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 86px;
+  }
+
+  .additions__list {
+    width: 896px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .additions__promo {
+    width: 245px;
+  }
 }

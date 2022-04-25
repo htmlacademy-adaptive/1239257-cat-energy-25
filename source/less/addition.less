@@ -1,6 +1,7 @@
 .addition {
   padding-top: 13px;
   padding-bottom: 18px;
+  border-top: 1px solid #cdcdcd;
 }
 
 .addition__name {
@@ -16,4 +17,20 @@
 .addition__content {
   margin-top: 0;
   margin-bottom: 15px;
+}
+
+@media (min-width: @tablet-width) {
+  .addition {
+    padding: 26px 38px;
+    padding-bottom: 28px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .addition {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
