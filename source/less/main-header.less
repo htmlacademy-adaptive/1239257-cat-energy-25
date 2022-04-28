@@ -4,6 +4,12 @@
 
 @media (min-width: @tablet-width) {
   .main-header {
-    border-bottom: none;
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    background: linear-gradient(270deg, @accentColor 0, @accentColor 50%, @pageColor 50%, @pageColor 100%);
   }
 }

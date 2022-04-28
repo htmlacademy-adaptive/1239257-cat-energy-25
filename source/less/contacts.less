@@ -16,6 +16,10 @@
 
 .contacts__iframe {
   width: 100%;
+  display: block;
+  background-image: url("../img/map-sm.png");
+  background-position: 0 0;
+  border: none;
 }
 
 .contacts__slogan {
@@ -26,6 +30,7 @@
   font-size: 16px;
   line-height: 20px;
   color: @titleColor;
+  text-transform: uppercase;
 }
 
 .contacts__address {
@@ -79,5 +84,9 @@
     padding-left: 80px;
     padding-right: 80px;
     background-color: @pageColor;
+  }
+
+  .contacts__iframe {
+    height: 400px;
   }
 }
