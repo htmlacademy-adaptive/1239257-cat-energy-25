@@ -1,38 +1,100 @@
 .benefit {
+  min-height: 60px;
   display: flex;
   align-items: center;
-  outline: 1px solid @accentColor;
-}
-
-.benefit__icon {
-  width: 60px;
-  height: 60px;
-  flex: none;
-  margin-right: 20px;
-  background-color: @accentColor;
+  counter-increment: benefits;
 }
 
 .benefit__text {
   margin: 0;
+  padding-left: 80px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: -3px;
+    left: 0;
+    background-color: @accentColor;
+  }
+}
+
+.benefit__text--health::before {
+  background: url("../img/leaf.svg") center center no-repeat;
+}
+
+.benefit__text--cook::before {
+  background: url("../img/soup.svg") center center no-repeat;
+}
+
+.benefit__text--eat::before {
+  background: url("../img/knife.svg") center center no-repeat;
+}
+
+.benefit__text--time::before {
+  background: url("../img/clock.svg") center center no-repeat;
 }
 
 @media (min-width: @tablet-width) {
   .benefit {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 40px;
+    min-height: 280px;
+    padding-top: 92px;
     padding-bottom: 12px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: counter(benefits);
+      width: 136px;
+      height: 280px;
+      bottom: 9px;
+      right: 2px;
+      .oswaldRegular;
+      font-size: 280px;
+      line-height: 280px;
+      text-align: center;
+      color: #f2f2f2;
+    }
   }
 
-  .benefit__icon {
-    width: 60px;
-    height: 60px;
-    margin-right: 0;
-    margin-bottom: 31px;
+  .benefit:first-child::before {
+    right: 9px;
   }
 
   .benefit__text {
-    padding-left: 5px;
+    padding-left: 0;
+    padding-top: 0;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: -113px;
+      left: 0;
+      background-color: @accentColor;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .benefit {
+    padding-top: 71px;
+
+    &::before {
+      bottom: 38px;
+    }
+
+    &:last-child {
+      padding-left: 2px;
+      padding-top: 103px;
+    }
+  }
+
+  .benefit:last-child::before {
+    bottom: 1px;
+    right: 3px;
   }
 }

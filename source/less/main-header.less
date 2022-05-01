@@ -1,0 +1,15 @@
+.main-header {
+  border-bottom: 1px solid @borderColor;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    background: linear-gradient(270deg, @accentColor 0, @accentColor 50%, @pageColor 50%, @pageColor 100%);
+  }
+}

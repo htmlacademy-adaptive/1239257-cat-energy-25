@@ -5,7 +5,21 @@
   text-decoration: none;
 }
 
+.copyright:hover .copyright__icon {
+  fill: @accentColor;
+}
+
+.copyright:active .copyright__icon {
+  fill: @accentColor;
+  opacity: 0.3;
+}
+
 .copyright__name {
   flex-grow: 1;
-  margin-right: 22px;
+  margin-right: 23px;
+  font-size: 16px;
+}
+
+.copyright__icon {
+  fill: @lightTextColor;
 }
